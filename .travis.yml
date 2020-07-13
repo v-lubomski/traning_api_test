@@ -5,8 +5,5 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - flake8 ./tests
-  - flake8 ./common
-  - flake8 ./model
-  - flake8 ./api
-  - pytest
+  - make lint
+  - make pytest
