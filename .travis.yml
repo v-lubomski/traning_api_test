@@ -1,0 +1,13 @@
+language: python
+python: 3.6
+
+install:
+  - make
+  - pip install -r requirements.txt
+
+script:
+  - flake8 ./tests
+  - flake8 ./common
+  - flake8 ./model
+  - flake8 ./api
+  - pytest
